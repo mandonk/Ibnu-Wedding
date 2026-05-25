@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Undangan Pernikahan Vintage</title>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
         body {
@@ -21,35 +23,48 @@
 </head>
 <body>
 
+    <!-- PEMUTAR AUDIO TERSEMBUNYI -->
     <audio id="bg-music" loop>
         <source src="MMR.mp3" type="audio/mpeg">
         Browser Anda tidak mendukung pemutar musik digital.
     </audio>
 
+    <!-- TOMBOL KONTROL MUSIK MELAYANG -->
     <button id="music-toggle" class="hidden fixed bottom-6 right-6 z-50 bg-[#705335] text-[#FDFBF7] p-3.5 rounded-full shadow-2xl hover:bg-[#5a422a] transition duration-300 cursor-pointer focus:outline-none">
         <span id="music-icon" class="text-lg block w-6 h-6 text-center leading-6">🎵</span>
     </button>
 
+    <!-- HERO SECTION -->
     <section class="min-h-screen flex flex-col justify-center items-center bg-amber-50/50 px-4 text-center relative overflow-hidden border-16 border-[#705335]/10">
         
+        <!-- Ornamen Bingkai Klasik -->
         <div class="absolute inset-4 border border-[#705335]/20 pointer-events-none m-4"></div>
         
         <p class="text-xl tracking-widest uppercase text-[#705335] mb-4">The Wedding of</p>
         
+        <!-- Nama Mempelai -->
         <h1 class="font-vintage-header text-5xl md:text-7xl font-bold italic text-[#705335] my-6">
             Ibnu & Sherin
         </h1>
         
+        <!-- Tanggal -->
         <p class="text-2xl tracking-wide italic text-gray-600 mb-8">01 Juni 2026</p>
         
+        <!-- Tombol Buka -->
         <button id="btn-open-invitation" class="bg-[#705335] text-[#FDFBF7] px-8 py-3 rounded-full shadow-md hover:bg-[#5a422a] transition duration-300 transform hover:scale-105 cursor-pointer font-sans tracking-wider text-sm uppercase">
             ✉️ Buka Undangan
         </button>
     </section>
 
+    <!-- MEMPELAI SECTION -->
     <section id="target-scroll-mempelai" class="py-20 px-6 max-w-4xl mx-auto text-center">
-        <p class="italic text-lg text-gray-500 mb-12">"Semoga Allah memberikan berkah kepadamu, semoga Allah mencurahkan keberkahan kepadamu dan semoga Allah mempersatukan kalian berdua dalam kebaikan."</p>
+        <!-- Doa & Kutipan Kecil -->
+        <div class="mb-12 max-w-2xl mx-auto">
+            <p class="italic text-lg text-gray-700 leading-relaxed">"Semoga Allah memberikan berkah kepadamu, semoga Allah mencurahkan keberkahan kepadamu dan semoga Allah mempersatukan kalian berdua dalam kebaikan."</p>
+            <p class="text-xs tracking-wider uppercase text-gray-400 font-sans mt-3">— Doa Nabi Muhammad SAW —</p>
+        </div>
         
+        <!-- 1 FRAME UTAMA (FOTO BERSAMA) -->
         <div class="max-w-md mx-auto bg-white p-4 pb-8 shadow-2xl border border-gray-200 rotate-[-1deg] hover:rotate-0 transition duration-500 mb-16">
             <div class="w-full h-80 bg-gray-200 overflow-hidden border border-gray-300 relative shadow-inner">
                 <div class="absolute inset-0 bg-[#705335]/10 mix-blend-color pointer-events-none"></div>
@@ -58,12 +73,15 @@
             <p class="font-vintage-header text-2xl italic text-[#705335] mt-5 tracking-wide">Ibnu & Sherin</p>
         </div>
         
+        <!-- DETAIL INFORMASI MEMPELAI -->
         <div class="grid md:grid-cols-2 gap-12 items-start text-center">
+            <!-- Mempelai Pria -->
             <div class="space-y-2">
                 <h3 class="font-vintage-header text-3xl font-bold text-[#705335]">Muhammad Ibnu Zulfikar</h3>
                 <p class="text-sm text-gray-600">Putra kedua dari <br> <b>Bpk. AKP. Purn Hasmun Hasan. SH</b> & <b>Ibu Sri Rubiyati. Sanusi</b></p>
             </div>
 
+            <!-- Mempelai Wanita -->
             <div class="space-y-2">
                 <h3 class="font-vintage-header text-3xl font-bold text-[#705335]">Sherin Febriani</h3>
                 <p class="text-sm text-gray-600">Putri kedua dari <br> <b>Bpk. Nurham H. Laupe</b> & <b>Ibu Suhria Hasan</b></p>
@@ -71,20 +89,23 @@
         </div>
     </section>
 
+    <!-- ACARA SECTION -->
     <section class="bg-[#879883]/10 py-16 px-6 border-t border-b border-[#705335]/10">
         <div class="max-w-3xl mx-auto text-center">
             <h2 class="font-vintage-header text-4xl text-[#705335] mb-12">Rangkaian Acara</h2>
             
             <div class="grid md:grid-cols-2 gap-8 text-center">
+                <!-- Akad -->
                 <div class="bg-[#FDFBF7] p-8 rounded-lg shadow-sm border border-[#705335]/10">
                     <h4 class="font-vintage-header text-2xl font-bold text-[#705335] mb-4">Akad Nikah</h4>
                     <p class="font-semibold">09:00 WITA - Selesai</p>
-                    <p class="text-sm text-gray-600 mt-2">Perumahan Jawijawi Permai</p>
-                    <p class="text-xs text-gray-500 italic mt-1">JL. Andi Mappangara, Perum. Jawijawi, Blok B no. 25, Kel. Lapadde, Kec. Ujung, Kota Parepare</p>
+                    <p class="text-sm text-gray-600 mt-2">Gedung Islamic Center</p>
+                    <p class="text-xs text-gray-500 italic mt-1">JL. H. Agussalim, Kota Parepare</p>
                 </div>
+                <!-- Resepsi -->
                 <div class="bg-[#FDFBF7] p-8 rounded-lg shadow-sm border border-[#705335]/10">
                     <h4 class="font-vintage-header text-2xl font-bold text-[#705335] mb-4">Resepsi</h4>
-                    <p class="font-semibold">11:00 WITA - Selesai</p>
+                    <p class="font-semibold">12:00 WITA - Selesai</p>
                     <p class="text-sm text-gray-600 mt-2">Perumahan Jawijawi Permai</p>
                     <p class="text-xs text-gray-500 italic mt-1">JL. Andi Mappangara, Perum. Jawijawi, Blok B no. 25, Kel. Lapadde, Kec. Ujung, Kota Parepare</p>
                 </div>
@@ -92,6 +113,31 @@
         </div>
     </section>
 
+    <!-- SEKSI HALAMAN UCAPAN TERIMA KASIH (NEW) -->
+    <section class="py-24 px-6 text-center relative overflow-hidden">
+        <div class="max-w-2xl mx-auto space-y-6 relative z-10">
+            <!-- Simbol Hati Pembatas Klasik -->
+            <span class="text-2xl text-[#705335]/40 block mb-2">❦</span>
+            
+            <h2 class="font-vintage-header text-4xl font-bold text-[#705335] tracking-wide">Terima Kasih</h2>
+            
+            <p class="text-lg md:text-xl leading-relaxed text-gray-600 max-w-xl mx-auto italic pt-2">
+                "Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir di hari bahagia kami."
+            </p>
+            
+            <!-- Nama Hormat Kami -->
+            <div class="pt-8 space-y-1">
+                <p class="text-sm tracking-widest uppercase text-gray-400 font-sans">Kami yang berbahagia,</p>
+                <h3 class="font-vintage-header text-3xl font-semibold italic text-[#705335]">Ibnu & Sherin</h3>
+            </div>
+        </div>
+        
+        <!-- Aksen Dekorasi Latar Belakang Halus -->
+        <div class="absolute -bottom-10 -left-10 text-9xl text-gray-100 font-serif select-none pointer-events-none">“</div>
+        <div class="absolute -top-10 -right-10 text-9xl text-gray-100 font-serif select-none pointer-events-none">”</div>
+    </section>
+
+    <!-- SCRIPT LOGIKA PEMUTAR MUSIK & SMOOTH SCROLL -->
     <script>
         const bgMusic = document.getElementById('bg-music');
         const btnOpen = document.getElementById('btn-open-invitation');
@@ -99,22 +145,14 @@
         const musicIcon = document.getElementById('music-icon');
         const targetScroll = document.getElementById('target-scroll-mempelai');
 
-        // Set volume awal agar tidak terlalu keras (rentang 0.0 - 1.0)
         bgMusic.volume = 0.6;
 
-        // Aksi saat tombol "Buka Undangan" ditekan
         btnOpen.addEventListener('click', () => {
-            // Jalankan musik latar belakang
-            bgMusic.play().catch(err => console.log("Musik tertahan sistem kebijakan privasi browser."));
-            
-            // Memunculkan tombol kontrol audio melayang
+            bgMusic.play().catch(err => console.log("Musik tertahan kebijakan privasi browser."));
             musicToggle.classList.remove('hidden');
-            
-            // Gulir layar otomatis secara halus (smooth scroll) ke bawah
             targetScroll.scrollIntoView({ behavior: 'smooth' });
         });
 
-        // Aksi kontrol musik Play/Pause dari tombol melayang
         musicToggle.addEventListener('click', () => {
             if (bgMusic.paused) {
                 bgMusic.play();
